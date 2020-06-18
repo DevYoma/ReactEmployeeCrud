@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn yoma
+          Emore Ogheneyoma Lawrence
         </a>
       </header>
     </div>
