@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Emore Ogheneyoma Lawrence
+          Nothing this time
         </a>
       </header>
     </div>
