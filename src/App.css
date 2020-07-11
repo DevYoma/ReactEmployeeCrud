@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+*{
+  outline: none;
+}
+
 body{
   background: rgb(97, 81, 50);
   color: white;
@@ -41,9 +45,13 @@ body{
 }
 
 .clear__button{
-  background: rgb(226, 75, 75);
+  background: #e24b4b;
   padding: 5px 10px;
   border-radius: 10px;
+}
+
+input[type="button"]:active{
+  outline:none;
 }
 
 
