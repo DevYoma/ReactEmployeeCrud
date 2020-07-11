@@ -1,16 +1,23 @@
-import React, {createContext, useState} from 'react';
+import React, {createContext, useState, useEffect} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 // import {uuid} from "uuid";
 
+//creating the tasklist context...
 export const TaskListContext = createContext();
 
 const TaskListContextProvider = (props) => {
 
-    const [tasks, setTasks] = useState([
-        {title: 'Read a book', id: 1},
-        {title: 'Walk the Dog', id: 2},
-        {title: 'Go shopping', id: 3},
-    ])
+    
+
+    //setting stored values from local storage to the react state
+    const initialState = JSON.parse(localStorage.getItem('tasks'))  || []
+
+    const [tasks, setTasks] = useState(initialState)
+
+    //setting to local storage
+    useEffect(() => {
+        localStorage.setItem('tasks', JSON.stringify(tasks))
+    }, [tasks])
 
     const [editItem, setEditItem] = useState(null);
 
@@ -23,7 +30,9 @@ const TaskListContextProvider = (props) => {
     }
 
     const clearList = () => {
+        if(window.confirm("Are you sure you want to clear the list"))
         setTasks([])
+        
     }
 
     const findItem = id => {
@@ -40,6 +49,8 @@ const TaskListContextProvider = (props) => {
         setTasks(newTasks)
         setEditItem(null);
     }
+
+    
     
     return(
         <TaskListContext.Provider value={{tasks, addTask, deleteTask, clearList, findItem, editTask, editItem}}>

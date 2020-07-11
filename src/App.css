@@ -2,3 +2,72 @@
   text-align: center;
 }
 
+body{
+  background: rgb(97, 81, 50);
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.header{
+  text-align: center;
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+
+
+.taskform__input{
+  padding: 10px 40px;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  outline: none;
+  font-size: large;
+  
+}
+
+/* .action__buttons{
+  display: flex;
+  justify-content: space-around;
+} */
+
+.submit__button{
+  background: rgb(116, 231, 116);
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-right: 30px;
+}
+
+.clear__button{
+  background: rgb(226, 75, 75);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+
+
+.list{
+  /* background: rgb(54, 15, 15); */
+  background: rgb(56, 49, 36);
+  padding: 5px 10px;
+  color:white;
+  display: flex;
+  justify-content: space-between;
+  margin: 13px 0;
+  font-size: 17px;
+  margin-right:40px ;
+  /* width: 90%; */
+  /* max-width: 95%; */
+  /* margin-left: 0; */
+}
+/* 
+#clearButtonflex{
+  flex:1;
+} */
+
+/* .listName{
+  flex: 1;
+} */
+

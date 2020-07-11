@@ -33,13 +33,13 @@ const TaskForm = () => {
 
     return ( 
         <div>
-            <form onSubmit={handleSubmit} style={{marginBottom:"48px", }}>
-                <input onChange={handleChange} value={title} type="test" placeholder="Add task.." required style={{marginBottom:"16px"}} />
-                <div>
-                    <button type="submit">
+            <form className="taskform" onSubmit={handleSubmit} style={{marginBottom:"48px", }}>
+                <input className="taskform__input" onChange={handleChange} value={title} type="test" placeholder="Add task.." required  />
+                <div className="action__buttons">
+                    <button className="submit__button" type="submit">
                         {editItem ? "Edit Task" : "Add Task"}
                     </button>
-                    <button type="submit" onClick={() => clearList()}>Clear</button>
+                    <button className="clear__button" type="submit" onClick={() => clearList()}>Clear tasks</button>
                 </div>
             </form>
         </div>

@@ -5,9 +5,9 @@ import Task from './Task'
 const TaskList = () => {
     const {tasks} = useContext(TaskListContext);
     return ( 
-        <div>
+        <div className="tasklist">
             {tasks.length ? 
-            (<ul>
+            (<ul >
             {tasks.map(task => {
                 return <Task  task={task} key={task.id}/>
             })}
